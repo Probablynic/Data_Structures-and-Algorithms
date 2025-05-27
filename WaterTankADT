@@ -1,0 +1,85 @@
+/* Niecos Apostol
+     class1:  code   6 - 54
+     class2:  code   58 - 82
+*/
+/*
+package watertankadt;
+
+import java.util.Scanner;
+public class WatertankADT {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Create a WaterTank object
+        System.out.print("Enter the capacity of the water tank: ");
+        int capacity = scanner.nextInt();
+        WaterTank tank = new WaterTank(capacity);
+
+        int choice;
+        while(true) {
+            System.out.println("\n===== Water Tank Menu =====");
+            System.out.println("1. Add water");
+            System.out.println("2. Remove water");
+            System.out.println("3. Check water level");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter amount of water to add: ");
+                    int addAmount = scanner.nextInt();
+                    tank.addWater(addAmount);
+                  
+                    System.out.println("Water added successfully.");
+                    break;
+                case 2:
+                    System.out.print("Enter amount of water to remove: ");
+                    int removeAmount = scanner.nextInt();
+                    tank.removeWater(removeAmount);
+                    System.out.println("Water removed successfully.");
+                    break;
+                case 3:
+                    System.out.println("Current water level: " + tank.checkLevel());
+                    break;
+                case 4:
+                    System.out.println("Exiting program. Goodbye!");
+                    break;
+                default:
+                    System.out.println("Invalid choice! Please try again.");
+            } 
+        }   
+    }   
+}
+ */
+
+/*
+package watertankadt;
+
+public class WaterTank {
+    private int capacity;
+    private int currentLevel;
+
+    // Constructor to initialize the tank
+    public WaterTank(int capacity) {
+        this.capacity = capacity;
+        this.currentLevel = 0;
+    }
+
+    // Method to add water to the tank
+    public void addWater(int amount) {
+        this.currentLevel = Math.min(this.capacity, this.currentLevel + amount);
+    }
+
+    // Method to remove water from the tank
+    public void removeWater(int amount) {
+        this.currentLevel = Math.max(0, this.currentLevel - amount);
+    }
+
+    // Method to check the current water level
+    public int checkLevel() {
+        return this.currentLevel;
+    }
+}
+ */
