@@ -1,0 +1,187 @@
+/* Niecos Apostol
+     class1:  queue code   7 - 105
+     class2:  node code    108 - 119
+     class3:  main code    123 - 186
+*/
+/*
+package queue;
+
+public class que {
+    Node front, rear;
+
+    public que() {
+        this.front = null;
+        this.rear = null;
+    }
+
+    public void enqueue(String data) {
+        Node newNode = new Node(data);
+        if (this.rear == null) {
+            this.front = this.rear = newNode;
+            return;
+        }
+        this.rear.next = newNode;
+        this.rear = newNode;
+    }
+
+    public String dequeue() {
+        if (this.front == null) {
+            System.out.println("Queue is Empty.");
+            return "";
+        }
+        Node temp = this.front;
+        this.front = this.front.next;
+
+        if (this.front == null) {
+            this.rear = null;
+        }
+        return temp.data;
+    }
+
+    public boolean isEmpty() {
+        return this.front == null;
+    }
+
+    public String peek() {
+        if (this.front == null) {
+            System.out.println("Queue is Empty.");
+            return "";
+        }
+        return this.front.data;
+    }
+
+    public void display() {
+        if (this.front == null) {
+            System.out.println("Queue is Empty.");
+            return;
+        }
+
+        Node current = this.front;
+        System.out.println("Queue: ");
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+    
+    public void displaysize() {
+        if (isEmpty()) {
+            System.out.println("Queue is Empty.");
+            return;
+        }
+
+        Node current = front;
+        int i = 0;
+        while (current != null) {
+            i++;
+            current = current.next;
+        }
+        System.out.println("Size of Queue: " + i);
+    }
+
+    public void displayReverse(Node node) {
+        if (node == null) {
+            return;
+        }
+        displayReverse(node.next);
+        System.out.print(node.data + " ");
+    }
+
+    public void displayReverseQueue() {
+        if (isEmpty()) {
+            System.out.println("Queue is Empty.");
+            return;
+        }
+        System.out.println("Queue in Reverse Order: ");
+        displayReverse(front);
+        System.out.println();
+    }
+
+    public void clearQueue() {
+        this.front = this.rear = null;
+        System.out.println("Queue cleared.");
+    }
+}
+*/
+/*
+Node.java
+package queue;
+
+public class Node {
+    String data;
+    Node next;
+
+    Node(String data2) {
+        this.data = data2;
+        this.next = null;
+    }
+}
+ */
+
+/*
+ Main.java
+package queue;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        que queue = new que();
+        Scanner nic = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println(
+                "\n============ QUEUE MENU =========== \n"
+                + "1. Enqueue \n"
+                + "2. Dequeue \n"
+                + "3. Peek \n"
+                + "4. Display Queue \n"
+                + "5. Display Queue in Reverse Order \n"
+                + "6. Get Queue Size \n"
+                + "7. Clear Queue \n"
+                + "8. Exit ");
+            System.out.print("Enter your choice: ");
+            choice = nic.nextInt();
+            nic.nextLine(); // Consume newline character
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter a name to add: ");
+                    String data = nic.nextLine();
+                    queue.enqueue(data);
+                    System.out.println("Name " + data + " is added.");
+                    break;
+
+                case 2:
+                    String removed = queue.dequeue();
+                    if (!removed.isEmpty()) {
+                        System.out.println("Name " + removed + " is deleted.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Front element: " + queue.peek());
+                    break;
+                case 4:
+                    queue.display();
+                    break;
+                case 5:
+                    queue.displayReverseQueue();
+                    break;
+                case 6:
+                    queue.displaysize();
+                    break;
+                case 7:
+                    queue.clearQueue();
+                    break;
+                case 8:
+                    System.out.println("Exiting program...");
+                    break;
+                default:
+                    System.out.println("Invalid choice! Please enter a valid option.");
+            }
+        } while (choice != 8);
+    }
+}
+ */
