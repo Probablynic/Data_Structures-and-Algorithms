@@ -176,3 +176,22 @@ Water Tank ADT Example
 - remove_water(amount).
               
 - check_level().
+
+
+/*
+
+                            Types of Data Structure
+                                   |
+         ---------------------------------------------------
+         |                                                 |
+Primitive Data Structure                    Non-Primitive Data Structure
+         |                                                 |
+------------------------------------------------     ----------------------------
+|        |        |         |                      Linear Data Structure     Non-Linear Data Structure
+Integer  Float  Character  Boolean               |                          |
+                                              -----------------------     ---------------------
+                                              |    |     |     |         |                   |
+                                           Arrays Linked Stack Queue   Trees              Graphs
+
+
+*/
