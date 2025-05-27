@@ -1,0 +1,214 @@
+/* Niecos Apostol
+     class1:  stack code   7 - 131
+     class2:  node code    134 - 145
+     class3:  main code    148 - 213
+*/
+/*
+package LabActivity2_Apostol;
+
+public class Stack {
+	Node1 top;
+
+	int maxSize;
+	int currentSize;
+
+	public Stack(int maxSize) {
+		this.top = null;
+		this.maxSize = maxSize;
+		this.currentSize = 0;
+
+	}
+
+	public void push(String data) {
+		if (currentSize >= maxSize) {
+			System.out.println("Stack is full.");
+			return;
+
+		}
+		Node1 newNode = new Node1(data);
+		newNode.next = top;
+		top = newNode;
+		currentSize++;
+		System.out.println("Name "+ top.data + " has been added.");
+
+	}
+
+	public String pop() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+			return null;
+		}
+		String poppedData = top.data;
+		top = top.next;
+		currentSize--;
+		return poppedData;
+	}
+
+	public String peek() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+		} else {
+			System.out.println("Top Data: " + top.data);
+		}
+		return null;
+	}
+
+	public boolean isEmpty() {
+		return top == null;
+
+	}
+
+	public void display() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+			return;
+		}
+
+		Node1 current = top;
+		while (current != null) {
+			System.out.println(current.data);
+			current = current.next;
+		}
+	}
+
+	public void position(String positionname) {
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+			return;
+		}
+		Node1 current = top;
+		int i = 0;
+		while (current != null) {
+			i++;
+			if (current.data.equals(positionname)) {
+				System.out.println("Position: " + i);
+			}
+			current = current.next;
+		}
+	}
+
+	public void displaysize() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+			return;
+		}
+		Node1 current = top;
+		int i = 0;
+		while (current != null) {
+			i++;
+			current = current.next;
+		}
+		System.out.println("Size of stack: " + i);
+	}
+	public void checkEmpty() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+		} else {
+			System.out.println("Size of stack is not empty");
+		}
+	}
+	public void checkFull() {
+		if (currentSize >= maxSize) {
+			System.out.println("Stack is Full");
+		} else {
+			System.out.println("Size of stack is not full");
+		}
+	}
+	public int getSize() {
+		return currentSize;
+
+	}
+
+	public int getMaxSize() {
+		return maxSize;
+	}
+
+	public void clear() {
+		this.top = null;
+		this.currentSize = 0;
+		System.out.println("Stack cleared.");
+	}
+}
+*/
+/*
+package LabActivity2_Apostol;
+
+public class Node1 {
+	String data;
+    Node1 next;
+
+    public Node1(String data) {
+        this.data = data;
+        this.next = null;
+	}
+
+}
+ */
+/*
+package LabActivity2_Apostol;
+
+import java.util.Scanner;
+
+public class main {
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter max stack size: ");
+		int size = scanner.nextInt();
+		Stack S = new Stack(size);
+		int choice;
+
+		while (true) {
+			System.out.println("Stack Operation:"
+					+ "\n1. Push"
+					+ "\n2. Pop"
+					+ "\n3. Peek"
+					+ "\n4. Display"
+					+ "\n5. Check if the stack is Empty"
+					+ "\n6. Check if the stack is Full"
+					+ "\n7. Get Stack Size"
+					+ "\n8. Get Max Stack Size"
+					+ "\n9. Clear Stack"
+					+ "\n10. Exit"
+					+ "\nEnter your Option: ");
+
+			choice = scanner.nextInt();
+			switch (choice) {
+			case 1:
+				System.out.println("\nEnter a name to push: ");
+				String name = scanner.next();
+				S.push(name);
+				break;
+
+			case 2:
+				System.out.println("Name \"" + S.pop() + "\" has been removed.");
+				break;
+			case 3:
+				S.peek();
+				break;
+			case 4:
+				S.display();
+				break;
+			case 5:
+				S.checkEmpty();
+				break;
+			case 6:
+				S.checkFull();
+				break;
+			case 7:
+				System.out.println("Stack size: " + S.getSize());
+				break;
+			case 8:
+				System.out.println("Max stack size: " + S.getMaxSize());
+				break;
+			case 9:
+				S.clear();
+				break;
+			case 10:
+				System.out.println("Exiting program...");
+				break;
+			}
+		}
+	}
+}
+ */
