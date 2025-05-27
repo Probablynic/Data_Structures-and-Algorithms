@@ -195,3 +195,157 @@ Integer  Float  Character  Boolean               |                          |
 
 
 */
+
+Stacks
+- A stack is a data structure of ordered items such that items can be inserted and removed only at one end.
+  
+- A stack is a LIFO (Last-In/First-Out) data structure
+  
+- A stack is sometimes also called a pushdown store.
+
+What can we do with a stack?
+
+- push - place an item on the stack
+  
+- peek - Look at the item on top of the stack, but do not remove it
+  
+- pop - Look at the item on top of the stack and remove it
+
+What happens if we try to pop an item off the stack when the stack is empty?
+
+- This is called a stack underflow.
+
+Interface IStack
+
+- Interface Istack {
+  boolean empty();
+  void push(char c);
+  char pop();
+  char peek();
+}
+
+Implementing a Stack
+
+There are two ways we can implement a stack:
+
+- Using an array
+  
+- Using a linked list
+
+Queue
+- A data structure of ordered items such that items can be inserted only at one end and removed at the other end.
+  
+- A queue is called a FIFO (First in-First out) data structure.
+
+What can we do with a queue?
+
+- Enqueue - Add an item to the queue
+  
+- Dequeue - Remove an item from the queue
+
+What are some applications of queues?
+
+- Round-robin scheduling in processors
+  
+- Input/Output processing
+  
+- Queueing of packets for delivery in networks
+
+Implementing a Queue
+
+Just like a stack, we can implementing a queue in two ways:
+
+- Using an array
+  
+- Using a linked list
+
+Using an array to implement a queue is significantly harder than using an array to implement a stack. Why?
+
+- Unlike a stack, where we add and remove at the same end, in a queue we add to one end and remove from the other.
+  
+- Front of the queue is stored as the head node of the linked list, rear of the queue is stored as the tail node.
+  
+- Enqueue by adding to the end of the list
+  
+- Dequeue by removing from the front of the list.
+
+INTRODUCTION TO LINKED LISTS
+UNDERSTANDING LINKED LIST STRUCTURES IN DATA STRUCTURES
+
+LINKED LIST
+
+- A linked list is a linear data structure.
+  
+- Unlike arrays, linked lists do not have a fixed size.
+  
+- Elements (nodes) are linked using pointers.
+  
+LINKED LISTS PURPOSE
+
+- Dynamic memory allocation.
+  
+- Efficient insertions and deletions.
+  
+- No memory wastage compared to arrays.
+  
+- Used in applications like memory management, navigation systems, etc.
+
+TYPES OF LINKED LISTS
+
+- Singly Linked List (One-way linking)
+  
+- Doubly Linked List (Two-way linking)
+  
+- Circular Linked List (Last node points to first node)
+
+SINGLY LINKED LIST - STRUCTURE
+
+Each node contains:
+
+- Data
+  
+- Pointer to the next node
+  
+Example Representation:
+
+- head -> [Data | Next] -> [Data | Next] -> NULL
+
+SINGLY LINKED LIST OPERATIONS
+
+- Insertion
+  
+- Deletion
+  
+- Traversal
+
+DOUBLY LINKED LIST - STRUCTURE
+
+Each node contains:
+
+- Data
+  
+- Pointer to the previous node
+  
+- Pointer to the next node
+  
+Example Representation:
+
+- NULL <- [Prev | Data | Next] <-> [Prev | Data | Next] -> NULL
+
+DOUBLY LINKED LIST - OPERATIONS
+
+- Insertion: Can be done at the beginning, middle, or end.
+
+- Deletion: More efficient than singly linked list.
+
+- Traversal: Can traverse both forward and backward.
+
+SUMMARY & CONCLUSION
+
+- Linked lists provide dynamic memory management.
+  
+- Singly linked lists use one pointer per node.
+  
+- Doubly linked lists use two pointers, enabling bidirectional traversal.
+  
+- Choosing between them depends on the specific use case.
