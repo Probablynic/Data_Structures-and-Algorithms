@@ -1,0 +1,138 @@
+/* Niecos Apostol
+   DoublyLinkedList Sample
+     class1:  queue code   7 - 105
+     class2:  node code    108 - 119
+     class3:  main code    123 - 186
+*/
+/*
+package doublylinkedlistsample;
+
+public class Queue {
+    private Node front, rear;
+
+    public Queue() {
+        this.front = this.rear = null;
+    }
+
+    // Enqueue operation
+    public void enqueue(int number) {            //1
+        Node newNode = new Node(number);         //2
+        if (rear == null) {                      //3
+            front = rear = newNode;              //4
+        } else {                                 //5
+            rear.next = newNode;                 //6
+            newNode.prev = rear;                 //7
+            
+            rear = newNode;                      //8
+        }
+    }
+
+    // Dequeue specific number
+    public boolean dequeue(int number) {         //9 
+        if (front == null) {                     //10
+            System.out.println("Queue is empty!");  //11
+            return false;                           //12
+        }
+
+        Node current = front;                                      //13
+        while (current != null && current.number != number) {     //14
+            current = current.next;                                 //15
+        }
+
+        if (current == null) {                                       //16
+            System.out.println("Number not found in queue!");          //17
+            return false;                                             //18
+        }
+        // Removing the node
+        if (current == front) {                                       //19
+            front = current.next;                                      //20
+            if (front != null) {                                       //21
+                front.prev = null;                                     //22    
+            } 
+            else { 
+                rear = null; // If queue becomes empty                 //23
+            }
+        } else if (current == rear) { // Removing rear node            //24
+            rear = current.prev;                                      //25
+            rear.next = null;                                         //26
+        } else { // Removing middle node
+            current.prev.next = current.next;                        //27
+            current.next.prev = current.prev;                        //28
+        }
+
+        System.out.println("Dequeued: " + number);                  //29
+        return true;                                                //30
+    }
+
+    // Peek operation
+    public int peek() {
+        if (front == null) {
+            System.out.println("Queue is empty!");
+            return -1;
+        }
+        return front.number;
+    }
+
+    // Display queue elements
+    public void display() {
+        if (front == null) {
+            System.out.println("Queue is empty!");
+            return;
+        }
+        Node temp = front;
+        System.out.print("Queue: ");
+        while (temp != null) {
+            System.out.print(temp.number + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+}
+*/
+/*
+package doublylinkedlistsample;
+
+public class Node {
+    int number;
+    Node prev, next;
+
+    public Node(int number) {
+        this.number = number;
+        this.prev = this.next = null;
+    }
+}
+ */
+
+/*
+
+package doublylinkedlistsample;
+
+public class DoublyLinkedListSample {
+
+    public static void main(String[] args) {
+    
+        Queue queue = new Queue();
+
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.enqueue(40);
+
+        queue.display(); // Queue: 10 20 30 40
+
+        queue.dequeue(20);
+        queue.display(); // Queue: 10 30 40
+
+        queue.dequeue(10);
+        queue.display(); // Queue: 30 40
+
+        System.out.println("Front of Queue: " + queue.peek()); // Front of Queue: 30
+
+        queue.dequeue(40);
+        queue.display(); // Queue: 30
+
+        queue.dequeue(30);
+        queue.display(); // Queue is empty!
+    }
+}
+ */
